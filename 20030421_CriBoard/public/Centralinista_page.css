@@ -1,0 +1,533 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,50,600,700,800,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+p
+{
+    font-weight: 300;
+    color: #111;
+}
+
+body
+{
+   min-height: 1000px; 
+}
+.banner
+{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/tasto.jpg);
+    background-size: cover;
+}
+
+.banner .content
+{
+    max-width: 900px;
+    text-align: center;
+}
+
+.banner .content h2
+{
+    font-size: 5em;
+    color: #fff;
+    text-shadow: -1px 0 #111, 0 1px #111, 1px 0 #111, 0 -1px #111;
+}
+
+.banner .content p
+{
+    font-size: 1em;
+    color: #111;
+    text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+    font-weight: 1000;
+}
+
+.btn
+{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+}
+
+.btn:hover
+{
+    letter-spacing: 6px;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky
+{
+   background: #fff; 
+   padding: 10px 100px;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+    text-decoration: none;
+}
+
+header.sticky .logo
+{
+    color: #111;
+}
+
+header .logo span
+{
+    color: red;
+}
+
+header .navigator
+{
+    position: relative;
+    display: flex;
+}
+
+header .navigator li
+{
+    list-style: none;
+    margin-left: 30px;
+}
+
+header .navigator li a
+{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+}
+
+header.sticky .navigator li a
+{
+    color: #111;
+}
+
+header .navigator li a:hover
+{
+    color: #ff0157;
+}
+
+section
+{
+    padding: 100px;
+}
+
+.row
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row .col50
+{
+    position: relative;
+    width: 48%;
+}
+
+.titleText
+{
+    color: #111;
+    font-size: 2em;
+    font-weight: 300;
+}
+
+.titleText span
+{
+    color: red;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.row .col50 .imgBx
+{
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+}
+
+.row .col50 .imgBx img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.warning
+{
+    background: url(images/4665426-grunge-background-legno.jpg);
+}
+
+.containerAccordion
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /*background: #bedfe8;*/
+    background: url(images/sfondo-lavagna-sfondo-4096x3072_30.jpg);
+}
+
+.accordion
+{
+    width: 800px;
+}
+
+.accordion .contentBx
+{
+    position: relative;
+    margin: 10px 20px;
+}
+
+.accordion .contentBx .label
+{
+    position: relative;
+    padding: 10px;
+    background: #2694af;
+    color: #fff;
+    cursor: pointer;
+}
+
+.accordion .contentBx .label::before
+{
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+
+.accordion .contentBx.active .label::before
+{
+    content: '-';
+}
+
+.accordion .contentBx .content
+{
+    position: relative;
+    background: #fff;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+}
+
+.accordion .contentBx.active .content
+{
+    height: 150px;
+    padding: 10px;
+}
+
+
+.add-warning
+{
+    background: url(images/istockphoto-616902300-170667a.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.add-warning .content
+{
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.addForm
+{
+    padding: 75px 50px;
+    background: #fff;
+    box-shadow: 0 15fx 50px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin-top: 50px;
+}
+
+.addForm h3
+{
+    color: #111;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.addForm .inputBox
+{
+    position : relative;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.addForm .inputBox input,
+.addForm .inputBox textarea
+{
+    width: 100%;
+    border: 1px solid #555;
+    padding: 10px;
+    color: #111;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    resize:vertical;
+}
+
+.addForm .inputBox input[type="submit"]
+{
+    font-size: 1em;
+    color: #fff;
+    background: #ff0157;
+    display: inline-block;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    max-width: 100px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+
+/*
+
+.prenotazioni h1
+{
+    padding: 100px;
+}
+*/
+
+
+.Servizi .content
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+
+.content-table
+{
+    justify-content: center;
+    align-items:center;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    min-width: 400px;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.content-table thead tr {
+    background-color: red;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+  padding: 12px 15px;
+}
+
+.content-table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+  border-bottom: 2px solid red;
+}
+
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.add-servizi
+{
+    background: url(images/istockphoto-616902300-170667a.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.add-servizi .content
+{
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.ricerca-servizi
+{
+    background: url(images/istockphoto-616902300-170667a.jpg);
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.ricerca-servizi .content1
+{
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.ricerca-servizi .content2
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.red
+{
+    color: red;
+}
+
+@media(max-width:991px){
+    header,
+    header.sticky 
+    {
+        padding: 10px 20px;
+    }
+    header .navigator
+    {
+        display: none;
+    }
+    header .navigator.active
+    {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 55px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+    }
+
+    header .navigator li
+    {
+        margin-left: 0;
+    }
+
+    header .navigator li a
+    {
+        color: #111;
+        font-size: 1.6em;
+    }
+
+    .menuToggle
+    {
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(images/menu.png);
+        background-size: 30px 30px;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+
+    .menuToggle.active
+    {
+        background: url(images/cancel.png);
+        background-size: 25px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    header.sticky .menuToggle
+    {
+        filter: invert(1);
+    }
+
+    header.sticky .menuToggle.active
+    {
+        filter: invert(0);
+    }
+
+    section
+    {
+        padding:20px;
+    }
+
+    .banner .content h2
+    {
+        font-size:3em;
+        color:#fff;
+    }
+
+    .row
+    {
+        flex-direction:column;
+    }
+
+    .row .col50
+    {
+        position:relative;
+        width: 100%;
+    }
+
+    .row .col50 .imgBx
+    {
+        height:300px;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:480px) {
+    .banner .content h2 {
+        font-size:2.2em;
+        color:#fff;
+    }
+
+    
+}

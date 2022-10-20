@@ -1,0 +1,17 @@
+Il link al video del progetto è "https://www.youtube.com/watch?v=FkherBOQOoY".
+Le slide usate nel libro sono nel google drive al link "https://drive.google.com/drive/folders/1w70jO_Tly9ebWBxBnVwvDhLuP25GJeeQ?usp=sharing".
+
+
+La pagina web si offre come piattaforma web per la visualizzazione e l'aggiornamento di bacheche per gli avvisi e i servizi in un comitato di Croce Rossa.
+Per accedere alla pagina web bisogna visitare "http://localhost:3000/".
+Una volta fatto accesso all'url, verrete reindirizzati alla pagina Home, dove potrete leggere informazioni sulla croce rossa e sulla piattaforma oppure farvi reinderizare alla pagina del Login premendo "Login".
+Nella schermata di login un utente senza credenziali che vuole unirsi al comitato può mandare una richiesta di adesione tramite la sua email, che verrà ricevuta in un apposito database.
+Le credenziali sono tutte criptate e le password dei vari account sono "user" concatenato al codice utente (ad esempio il codice utente "1000" avrà come password "user1000").
+Al momento del login verrà controllato se l'utente è un centralinista o un volontario, i centralinisti verranno reinderizzati alla pagina per i centralinisti, mentre i barellieri e gli autisti verranno mandati alla pagina dei volontari.
+
+I centralinisti possono visualizzare, cancellare e aggiungere i servizi e gli avvisi in bacheca.
+Inoltre possono filtrare e cercare i servizi per tipo, barelliere e autista in un'apposita tabella; In caso in omissione di uno o più campi, verrà ignorato quel campo.
+
+I volontari possono visualizzare gli avvisi, i servizi per i quali si sono già prenotati e quelli in cui possono prenotarsi, con la differenza che gli autisti possono segnarsi sia come autista che come barelliere, mentre i barellieri solo come tali.
+
+Un autista non si può segnare nello stesso servizio due volte sia come barelliere ed autista.

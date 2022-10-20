@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRI Board</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer type="module" src="js\main_login.js"></script>
+</head>
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="container">
+                <div class="form">
+                    <form method="POST" action="" id="login-form">
+                    <h2>Login Cri Board</h2>
+                    <form>
+                        <div class="inputBox">
+                            <input name="code" type="text" placeholder="Codice utente">
+                        </div>
+                        <div class="inputBox">
+                            <input name="password" type="password" placeholder="Password">
+                        </div>
+                        <div class="inputBox">
+                            <input type="submit" value="Login">
+                        </div>
+                    </form>
+                        <p class="newUtent">Vuoi unirti alla Croce Rossa? <a class="TogPop" id="announcements"  href="#">Clicca qui!</a> </p>
+                        <p class="newUtent">Vuoi tornare alla Home? <a class="TogPop"  id="returnHome" href="#">Clicca qui!</a> </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="popup">
+        <div class="content">
+            <img src="images\email.png">
+            <h2>Unisciti A Noi</h2>
+            <p>Se sei interessato ad unirti alla Croce Rossa, mandaci la tua mail, un nostro volontario ti manderà le informazioni utili per renderlo possibile.</p>
+            <form method="POST" action="" id="adesione-form">
+            <div class="inputBoxPop">
+                <input type="email" name = "email" placeholder="Inserire Email">
+            </div>
+            <div class="inputBoxPop">
+                <input type="submit" class="TogPop" value="Invia">
+            </div>
+            </form>
+        </div>
+        <a class="close" id="close" ><img src="images\cancel.png"></a>
+    </div>
+</body>
+</html>

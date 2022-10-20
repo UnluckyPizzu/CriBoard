@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRI Board</title>
+    <link rel="stylesheet" href="volontario_page.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js\moment.js"></script>
+    <script defer type="module" src="js\main.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#banner" class="logo"><span>CRI</span> Board</a>
+        <div id="menuToggle" class="menuToggle"></div>
+        <ul class="navigator">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#warning">Avvisi</a></li>
+            <li><a href="#prenotazioni">Prenotazioni</a></li>
+            <li><a href="#Servizi">Servizi</a></li>
+            <li><a href="#" id="login">Logout</a></li>
+        </ul>
+    </header>
+    <section class='banner' id="banner">
+        <div class="content">
+            <h2 id="nome"></h2>
+            <p>Qui troverai tutti i servizi disponibili per te e le tue prenotazioni, oltre che gli avvisi della bacheca per essere sempre aggiornato sulle news del comitato!</p>
+            <a href="#warning" class="btn">Avvisi</a>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>CRI</span> Board</h2>
+                <p><i>"Poiché tutti possono, in un modo o nell'altro, ciascuno nella sua sfera e secondo le sue forze, contribuire in qualche misura a questa buona opera."</i></p>
+                <p>- Henry Dunant</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="images\CRI-Roma-Volontari-Braccia-Insieme-800x500.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="warning" id="warning">
+        <div class="containerAccordion">
+            <div class="accordion" id="accordion">
+                <!-- JS will fill it -->
+            </div>
+        </div>
+    </section>
+    <section class="prenotazioni" id="prenotazioni">
+        <div class="title">
+            <h2 class="titleText">Le tue <span>P</span>renotazioni</h2>
+        </div>
+        <div class="content">
+            <div style="overflow-x:auto;">
+            <table class="content-table">
+                <thead>
+                  <tr>
+                      <th>Data</th>
+                      <th>Orario</th>
+                      <th>Carico</th>
+                      <th>Scarico</th>
+                      <th>Tipo</th>
+                      <th>Autista</th>
+                      <th>Barelliere</th>
+                  </tr>
+                </thead>
+                <tbody id="my-prenotazioni">
+                    <!-- JS will fill it -->
+                </tbody>
+              </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="Servizi" id="Servizi">
+        <div class="title">
+            <h2 class="titleText">I <span>S</span>ervizi disponibili</h2>
+            <p>Prenotare i servizi è molto semplice: basta cliccare il tasto prenota del servizio che ti interessa. <br> ATTENZIONE: una volta effettuata la prenotazione non sarà possibile cancellarla.</p>
+        </div>
+        <div class="content">
+            <div style="overflow-x:auto;">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Orario</th>
+                        <th>Carico</th>
+                        <th>Scarico</th>
+                        <th>Tipo</th>
+                        <th>Autista</th>
+                        <th>Barelliere</th>
+                    </tr>
+                  </thead>
+                  <tbody id="prenotazioniDisp">
+                    <!-- JS will fill it -->
+                  </tbody>
+            </table>
+        </div>
+        </div>
+    </section>
+    
+
+
+
+
+
+</body>
+</html>

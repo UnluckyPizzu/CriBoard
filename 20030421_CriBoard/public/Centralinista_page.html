@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRI Board</title>
+    <link rel="stylesheet" href="Centralinista_page.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js\moment.js"></script>
+    <script defer type="module" src="js\main_centralino.js"></script>
+</head>
+<body>
+    <header>
+        <a href="#banner" class="logo"><span>CRI</span> Board</a>
+        <div id="menuToggle" class="menuToggle"></div>
+        <ul class="navigator">
+            <li><a href="#banner">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#warning">Avvisi</a></li>
+            <li><a href="#add-warning">Aggiungi Avvisi</a></li>
+            <li><a href="#Servizi">Servizi</a></li>
+            <li><a href="#add-servizi">Aggiungi Servizi</a></li>
+            <li><a href="#ricerca-servizi">Cerca Servizi</a></li>
+            <li><a href="#" id="login">Logout</a></li>
+        </ul>
+    </header>
+    <section class='banner' id="banner">
+        <div class="content">
+            <h2 id="nome"></h2>
+            <p>Qui puoi inserire i nuovi servizi, cancellare quelli annullati e aggiornare la bacheca degli avvisi.</p>
+            <a href="#warning" class="btn">Avvisi</a>
+        </div>
+    </section>
+    
+    <section class="about" id="about">
+        <div class="row">
+            <div class="col50">
+                <h2 class="titleText"><span>CRI</span> Board</h2>
+                <p><i>"Poiché tutti possono, in un modo o nell'altro, ciascuno nella sua sfera e secondo le sue forze, contribuire in qualche misura a questa buona opera."</i><br>- Henry Dunant</p>
+            </div>
+            <div class="col50">
+                <div class="imgBx">
+                    <img src="images\CRI-Roma-Volontari-Braccia-Insieme-800x500.jpg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="warning" id="warning">
+        <div class="containerAccordion">
+            <div class="accordion" id="accordion">
+                <!-- JS will fill it -->
+            </div>
+        </div>
+    </section>
+
+    <section class="add-warning" id="add-warning">
+        <div class="title">
+            <h2 class="titleText"><span>A</span>ggiungi Avvisi</h2>
+            <p>Inserisci qui le comunicazioni per mantenere sempre aggiornati i volontari del comitato.</p>
+        </div>
+        <div class="content">
+            <div class="addForm" >
+                <form role="form" method="POST" id="add-avvisi" action="">
+                <h3>Nuovo Avviso</h3>
+                <div class="inputBox">
+                    <textarea name="contenuto" placeholder="Contenuto dell'avviso...."></textarea>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Invia">
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="Servizi" id="Servizi">
+        <div class="title">
+            <h2 class="titleText">I <span>S</span>ervizi disponibili</h2>
+            <p>Questo è un riepilogo di tutti i servizi attivi al momento, se uno di questi è stato annullato basta cliccare il tasto cancella e CRI Board farà il resto.</p>
+        </div>
+        <div class="content">
+            <div style="overflow-x:auto;">
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Orario</th>
+                        <th>Carico</th>
+                        <th>Scarico</th>
+                        <th>Tipo</th>
+                        <th>Autista</th>
+                        <th>Barelliere</th>
+                        <th>Cancella</th>
+                    </tr>
+                  </thead>
+                  <tbody id="all-prenotazioni">
+                    <!-- JS will fill it -->
+                  </tbody>
+            </table>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="add-servizi" id="add-servizi">
+        <div class="title">
+            <h2 class="titleText"><span>A</span>ggiungi Servizi</h2>
+            <p>Inserisci tutti i dettagli del servizio richiesti. Ricorda che se autista o barelliere non sono ancora definiti, puoi non compilare i campi e lasciare che si prenotino i volontari successivamente.</p>
+        </div>
+        <div class="content">
+            <div class="addForm">
+                <form role="form" method="POST" id="add-servizio" action="">
+                <h3>Nuovo Servizio</h3>
+                <div class="inputBox">
+                    <input required name="data" type="date" placeholder="Data">
+                </div>
+                <div class="inputBox">
+                    <input required name="orario" type="time" placeholder="Orario">
+                </div>
+                <div class="inputBox">
+                    <input required name="carico" type="text" placeholder="Luogo di carico">
+                </div>
+                <div class="inputBox">
+                    <input required name="scarico" type="text" placeholder="Luogo di scarico">
+                </div>
+                <div class="inputBox">
+                    <input required name="tipo" type="text" placeholder="Tipo di servizio">
+                </div>
+                <div class="inputBox">
+                    <input name="autista" type="text" placeholder="Autista (non obbligatorio)">
+                </div>
+                <div class="inputBox">
+                    <input name="barelliere" type="text" placeholder="Barelliere (non obbligatorio)">
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Invia">
+                </div>
+            </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="ricerca-servizi" id="ricerca-servizi">
+        <div class="title">
+            <h2 class="titleText"><span>C</span>erca Servizi</h2>
+            <p>Inserisci tutti i dettagli dei servizi che stai cercando.</p>
+        </div>
+        <div class="content1">
+            <div class="addForm">
+                <form role="form" method="GET" id="ricerca-servizio" action="">
+                <h3>Ricerca Servizio</h3>
+                <div class="inputBox">
+                    <input  name="tipo" type="text" placeholder="Tipo di servizio">
+                </div>
+                <div class="inputBox">
+                    <input name="autista" type="text" placeholder="Autista">
+                </div>
+                <div class="inputBox">
+                    <input name="barelliere" type="text" placeholder="Barelliere">
+                </div>
+                <div class="inputBox">
+                    <input type="submit" value="Invia">
+                </div>
+                </form>
+            </div>
+        </div>
+            <div class="content2">
+            <div style="overflow-x:auto;">
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Orario</th>
+                            <th>Carico</th>
+                            <th>Scarico</th>
+                            <th>Tipo</th>
+                            <th>Autista</th>
+                            <th>Barelliere</th>
+                            <th>Cancella</th>
+                        </tr>
+                      </thead>
+                      <tbody id="prenotazioni-ricercate">
+                        <!-- JS will fill it -->
+                      </tbody>
+                </table>
+                </div>
+            </div>
+    </section>
+
+
+
+
+    
+
+
+
+
+
+</body>
+</html>
